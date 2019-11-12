@@ -1,0 +1,48 @@
+{
+  "name": "assetgraph-webbundle",
+  "version": "1.0.0",
+  "description": "Assetgraph transform to create a webbundle from the existing graph",
+  "main": "lib/webbundle.js",
+  "scripts": {
+    "lint": "eslint . && prettier --check '**/*.js'",
+    "test": "mocha",
+    "ci": "npm run coverage && npm run lint",
+    "docs": "jsdoc -c jsdoc.json",
+    "coverage": "NODE_ENV=test nyc -- mocha --reporter dot && echo google-chrome coverage/lcov-report/index.html",
+    "preversion": "offline-github-changelog --next=${npm_package_version} > CHANGELOG.md && git add CHANGELOG.md"
+  },
+  "keywords": [
+    "assetgraph",
+    "assetgraph-transform",
+    "webbundle"
+  ],
+  "author": "Peter Müller <munter@fumle.dk>",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "assetgraph": "^6.0.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^6.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^14.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-mocha": "^6.0.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jsdoc": "^3.5.5",
+    "magicpen-prism": "3.0.2",
+    "mocha": "^6.0.0",
+    "nyc": "^14.0.0",
+    "offline-github-changelog": "^1.6.1",
+    "prettier": "~1.18.2",
+    "unexpected": "^11.0.0-1",
+    "unexpected-assetgraph": "^1.1.1",
+    "unexpected-dom": "^4.5.0",
+    "unexpected-set": "^2.0.0",
+    "unexpected-sinon": "^10.10.1"
+  },
+  "dependencies": {
+    "to-arraybuffer": "^1.0.1",
+    "wbn": "0.0.3"
+  }
+}
