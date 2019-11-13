@@ -13,6 +13,6 @@ describe('when bundling local pages', () => {
     await graph.loadAssets('index.html');
     await graph.populate();
 
-    await webbundle(graph, 'mntr.dk.wbn');
+    await webbundle(graph, 'local.onlyHtml.wbn');
   });
 });

@@ -17,8 +17,7 @@ describe('when bundling online pages', () => {
             'HtmlAlternateLink',
             'SourceMapFile',
             'SourceMapSource'
-          ],
-          crossorigin: false
+          ]
         }
       }
     });
